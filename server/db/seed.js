@@ -1,3 +1,6 @@
+use hotel;
+db.dropDatabase();
+db.bookings.insertMany(
 [
     {
       "name": "Anselm Kermon",
@@ -50,3 +53,5 @@
       "checked_in": false
     }
   ]
+  
+  );
