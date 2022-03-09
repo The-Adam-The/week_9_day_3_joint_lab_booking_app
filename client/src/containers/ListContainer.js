@@ -1,10 +1,10 @@
 import ListItem from '../components/ListItem.js';
 
-function ListContainer({bookings}) {
+function ListContainer({bookings, removeBooking}) {
 
     const bookingsNodes = bookings.map((booking) => {
         return (
-            <ListItem booking={booking} key={booking._id} />
+            <ListItem removeBooking={removeBooking} booking={booking} key={booking._id} />
         )
     });
 

@@ -11,10 +11,18 @@ function App() {
     getBookings()
       .then((bookings) => setBookings(bookings));
   }, []);
+  
+  const removeBooking = (id) => {
+
+    const newBookings = bookings.filter((booking) => {
+      return booking._id !== id
+    })
+    setBookings(newBookings)
+  }
 
   return (
     <>
-      <MainContainer bookings={bookings} />
+      <MainContainer removeBooking={removeBooking} bookings={bookings}  />
     </>
   );
 }
